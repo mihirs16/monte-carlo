@@ -1,0 +1,14 @@
+{
+  "name": "client",
+  "version": "0.0.1",
+  "description": "the monaco-editor along with the monaco-languageclient.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack --mode=development",
+    "dev": "npx webpack-dev-server --mode=development"
+  },
+  "author": "",
+  "license": "MIT"
+}
