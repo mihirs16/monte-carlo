@@ -1,0 +1,3 @@
+[submodule "jsonrpc-ws-proxy"]
+	path = jsonrpc-ws-proxy
+	url = https://github.com/mihirs16/jsonrpc-ws-proxy/

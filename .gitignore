@@ -4,3 +4,9 @@
 
 # webpack/tsc builds
 **/dist/**
+
+# macos
+**/.DS_Store
+
+# vscode
+**/.vscode
