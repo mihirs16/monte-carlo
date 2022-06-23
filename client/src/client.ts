@@ -19,10 +19,37 @@ monaco.languages.register({
     aliases: ['python', 'py', 'PYTHON']
 });
 
+const sampleValue = `
+# press Cmd/Ctrl + h to auto-format
+
+x = {  'a':37,'b':42,
+
+'c':927}
+
+y = 'hello ''world'
+z = 'hello '+'world'
+a = 'hello {}'.format('world')
+class foo  (     object  ):
+  def f    (self   ):
+    return       37*-+2
+  def g(self, x,y=42):
+      return y
+def f  (   a ) :
+  return      37+-+a[42-x :  y**3]`;
+
 // initialize vanilla monaco editor
-monaco.editor.create(document.getElementById('editor') as HTMLElement, {
-    model: monaco.editor.createModel('', 'python', monaco.Uri.parse('inmemory://model.py')),
+const editor = monaco.editor.create(document.getElementById('editor') as HTMLElement, {
+    model: monaco.editor.createModel(sampleValue, 'python', monaco.Uri.parse('inmemory://model.py')),
     glyphMargin: true,
+});
+
+// hotkey binds
+document.addEventListener('keydown', (input) => {
+
+    // Ctrl + h = auto format code
+    if ((input.metaKey || input.ctrlKey) && input.key == 'h') {
+        editor.getAction('editor.action.formatDocument').run();
+    }
 });
 
 // install monaco-languageclient services
