@@ -22,6 +22,16 @@ module.exports = {
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
+        alias: {
+            'vscode': require.resolve('monaco-languageclient/vscode-compatibility')
+        },
+        fallback: {
+            fs: 'empty',
+            child_process: 'empty',
+            net: 'empty',
+            crypto: 'empty',
+            path: require.resolve("path-browserify")
+        }
     },
     output: {
         filename: 'bundle.js',

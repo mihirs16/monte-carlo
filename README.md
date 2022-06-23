@@ -4,14 +4,25 @@ A lightweight and fully-featured code editor that can be embedded in web applica
 
 ## Getting Started
 
-### Build from Source
+### Run the Sample Client
 
-- To build from source, fork this repository and run the following.
+- Fork and clone this repository.
 
 ```bash
 git clone https://github.com/:your-username:/monte-carlo
 cd monte-carlo
 npm install
+```
+
+- Run the JSON-RPC proxy for language servers. It supports multiple language servers to be run simultaneously.
+
+```bash
+npm run dev -w jsonrpc-ws-proxy
+```
+
+- Run the sample client concurrently.
+
+```bash
 npm run dev -w client
 ```
 
