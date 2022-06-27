@@ -4,7 +4,8 @@
   "description": "a lightweight yet fully-featured IDE that can be embedded into web apps.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build -w p2p-relay && npm run dev -w p2p-relay"
+    "build": "npm run build -w p2p-relay",
+    "start": "npm run dev -w p2p-relay"
   },
   "author": "Mihir Singh <mihirs16@gmail.com> (https://github.com/mihirs16)",
   "license": "MIT",
