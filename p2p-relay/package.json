@@ -1,0 +1,28 @@
+{
+  "name": "p2p-relay",
+  "version": "0.0.1",
+  "description": "server to relay p2p communications through crdt/gun.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "node dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihirs16/monte-carlo.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mihirs16/monte-carlo/issues"
+  },
+  "homepage": "https://github.com/mihirs16/monte-carlo#readme",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "gun": "^0.2020.1237"
+  }
+}

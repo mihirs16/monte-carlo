@@ -28,7 +28,7 @@ const editor = monaco.editor.create(document.getElementById('editor') as HTMLEle
     glyphMargin: true,
 });
 
-var gun = GUN();
+var gun = GUN(['http://localhost:8080', 'http://localhost:8000/gun']);
 var holster = gun.get('code-monte');
 var wasItFiredByMe = false;
 
