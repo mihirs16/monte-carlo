@@ -1,4 +1,4 @@
-// imports
+// monaco imports
 import * as monaco from 'monaco-editor';
 import { 
     MonacoLanguageClient, 
@@ -13,39 +13,44 @@ import {
     WebSocketMessageWriter
 } from 'vscode-ws-jsonrpc';
 
+// gun-js imports
+import GUN from 'gun';
+
 monaco.languages.register({
     id: 'python',
     extensions: ['.py'],
     aliases: ['python', 'py', 'PYTHON']
 });
 
-const sampleValue = `
-# press Cmd/Ctrl + h to auto-format
-
-x = {  'a':37,'b':42,
-
-'c':927}
-
-y = 'hello ''world'
-z = 'hello '+'world'
-a = 'hello {}'.format('world')
-class foo  (     object  ):
-  def f    (self   ):
-    return       37*-+2
-  def g(self, x,y=42):
-      return y
-def f  (   a ) :
-  return      37+-+a[42-x :  y**3]`;
-
 // initialize vanilla monaco editor
 const editor = monaco.editor.create(document.getElementById('editor') as HTMLElement, {
-    model: monaco.editor.createModel(sampleValue, 'python', monaco.Uri.parse('inmemory://model.py')),
+    model: monaco.editor.createModel('', 'python', monaco.Uri.parse('inmemory://model.py')),
     glyphMargin: true,
+});
+
+var gun = GUN();
+var holster = gun.get('code-monte');
+var wasItFiredByMe = false;
+
+editor.onDidChangeModelContent((e) => {
+    wasItFiredByMe = true
+    const value = editor.getValue();
+    console.log(value);
+    holster.put({ 'code': value });
+});
+
+
+holster.on((data) => {
+    if (wasItFiredByMe) {
+        wasItFiredByMe = false;
+        return;
+    }
+    console.log('realtime ==> ', data['code']);
+    editor.setValue(data['code']);
 });
 
 // hotkey binds
 document.addEventListener('keydown', (input) => {
-
     // Ctrl + h = auto format code
     if ((input.metaKey || input.ctrlKey) && input.key == 'h') {
         editor.getAction('editor.action.formatDocument').run();

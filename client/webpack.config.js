@@ -4,6 +4,7 @@ const MonacoEditorWebpackPlugin = require('monaco-editor-webpack-plugin');
 module.exports = {
     entry: './src/client.ts',
     module: {
+        noParse: /gun\.js$/,
         rules: [
             {
                 test: /\.tsx?$/,
