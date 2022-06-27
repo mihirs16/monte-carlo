@@ -10,8 +10,5 @@
   "workspaces": [
     "client",
     "jsonrpc-ws-proxy"
-  ],
-  "dependencies": {
-    "gun": "^0.2020.1237"
-  }
+  ]
 }

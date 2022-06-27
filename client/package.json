@@ -5,12 +5,13 @@
   "main": "dist/client.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx webpack --mode=development",
+    "build": "npx webpack --mode=production",
     "dev": "npx webpack-dev-server --mode=development"
   },
   "author": "Mihir Singh <mihirs16@gmail.com> (https://github.com/mihirs16)",
   "license": "MIT",
   "dependencies": {
+    "gun": "^0.2020.1237",
     "monaco-editor": "^0.33.0",
     "monaco-languageclient": "^1.1.0",
     "vscode-ws-jsonrpc": "^1.0.1"
