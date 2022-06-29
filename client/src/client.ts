@@ -46,6 +46,8 @@ holster.on((data) => {
         return;
     }
     console.log('realtime ==> ', data['code']);
+    const value = editor.getValue();
+    if (value == data['code']) return;
     editor.setValue(data['code']);
 });
 
