@@ -17,7 +17,7 @@ npm install
 - Run the JSON-RPC proxy for language servers. It supports multiple language servers to be run simultaneously.
 
 ```bash
-npm run dev -w jsonrpc-ws-proxy
+npm start -w jsonrpc-ws-proxy
 ```
 
 - Run the sample client (built with svelte) concurrently.
