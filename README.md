@@ -20,7 +20,7 @@ npm install
 npm run dev -w jsonrpc-ws-proxy
 ```
 
-- Run the sample client concurrently.
+- Run the sample client (built with svelte) concurrently.
 
 ```bash
 npm run dev -w client

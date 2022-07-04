@@ -1,32 +1,27 @@
 {
-  "name": "client",
-  "version": "0.0.1",
-  "description": "the monaco-editor along with the monaco-languageclient.",
-  "main": "dist/client.js",
+  "name": "svelte-client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx webpack --mode=production",
-    "dev": "npx webpack-dev-server --mode=development"
-  },
-  "author": "Mihir Singh <mihirs16@gmail.com> (https://github.com/mihirs16)",
-  "license": "MIT",
-  "dependencies": {
-    "gun": "^0.2020.1237",
-    "monaco-editor": "^0.33.0",
-    "monaco-languageclient": "^1.1.0",
-    "vscode-ws-jsonrpc": "^1.0.1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
-    "css-loader": "^6.7.1",
-    "monaco-editor-webpack-plugin": "^7.0.1",
-    "path-browserify": "^1.0.1",
-    "style-loader": "^3.3.1",
-    "ts-lib": "^0.0.5",
-    "ts-loader": "^9.3.0",
-    "tslib": "^2.4.0",
-    "typescript": "^4.7.3",
-    "webpack": "^5.73.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.9.2"
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "@tsconfig/svelte": "^2.0.1",
+    "svelte": "^3.44.0",
+    "svelte-check": "^2.2.7",
+    "svelte-preprocess": "^4.9.8",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9"
+  },
+  "dependencies": {
+    "monaco-editor": "^0.33.0",
+    "monaco-languageclient": "^2.0.2",
+    "vscode-ws-jsonrpc": "^1.0.1"
   }
 }
