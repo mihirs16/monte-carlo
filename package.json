@@ -4,7 +4,8 @@
   "description": "a lightweight yet fully-featured IDE that can be embedded into web apps.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run -w jsonrpc-ws-proxy"
+    "build": "npm run build -w jsonrpc-ws-proxy",
+    "start": "npm run dev -w jsonrpc-ws-proxy"
   },
   "author": "Mihir Singh <mihirs16@gmail.com> (https://github.com/mihirs16)",
   "license": "MIT",
