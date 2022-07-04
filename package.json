@@ -13,9 +13,6 @@
     "client",
     "jsonrpc-ws-proxy",
     "p2p-relay",
-    "react-client"
-  ],
-  "devDependencies": {
-    "create-react-app": "^5.0.1"
-  }
+    "svelte-client"
+  ]
 }
