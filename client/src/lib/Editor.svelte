@@ -1,3 +1,24 @@
+<style>
+        :global(.yRemoteSelection) {
+            background-color: rgb(250, 129, 0, .5)
+        }
+        :global(.yRemoteSelectionHead) {
+            position: absolute;
+            border-left: orange solid 2px;
+            border-top: orange solid 2px;
+            border-bottom: orange solid 2px;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        :global(.yRemoteSelectionHead::after) {
+            position: absolute;
+            content: ' ';
+            border: 3px solid orange;
+            border-radius: 4px;
+            left: -4px;
+            top: -5px;
+        }
+</style>
 <script lang="ts">
     // monaco-editor imports
     import type monaco from 'monaco-editor';
@@ -115,26 +136,5 @@
     });
 </script>
 
-<style>
-        .yRemoteSelection {
-            background-color: rgb(250, 129, 0, .5)
-        }
-        .yRemoteSelectionHead {
-            position: absolute;
-            border-left: orange solid 2px;
-            border-top: orange solid 2px;
-            border-bottom: orange solid 2px;
-            height: 100%;
-            box-sizing: border-box;
-        }
-        .yRemoteSelectionHead::after {
-            position: absolute;
-            content: ' ';
-            border: 3px solid orange;
-            border-radius: 4px;
-            left: -4px;
-            top: -5px;
-        }
-</style>
 
 <div bind:this={divEl} style="height: 90vh" />
