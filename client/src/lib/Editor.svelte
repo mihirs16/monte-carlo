@@ -79,7 +79,7 @@
         MonacoServices.install();
 
         // listen to the proxy server (for pyls in this case) 
-        const webSocket = new WebSocket('ws://localhost:3000/python');
+        const webSocket = new WebSocket('wss://monte-carlo-remote-lsp.herokuapp.com/python');
         webSocket.onopen = () => {
             const socket        = toSocket(webSocket);
             const reader        = new WebSocketMessageReader(socket);
