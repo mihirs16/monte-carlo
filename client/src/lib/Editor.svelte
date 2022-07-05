@@ -22,6 +22,11 @@
         WebSocketMessageWriter
     } from 'vscode-ws-jsonrpc';
 
+    // yjs imports
+    import * as Y from 'yjs';
+    import { WebrtcProvider } from 'y-webrtc';
+    import { MonacoBinding } from 'y-monaco'; 
+
     let divEl: HTMLDivElement = null;
     let editor: monaco.editor.IStandaloneCodeEditor;
     let Monaco: any;
@@ -46,6 +51,11 @@
             }
         };
 
+        const ydoc = new Y.Doc()
+        const provider = new WebrtcProvider('monaco', ydoc)
+        const type = ydoc.getText('monaco')
+
+
         Monaco = await import('monaco-editor');
         
         Monaco.languages.register({
@@ -58,6 +68,13 @@
             model: Monaco.editor.createModel('', 'python', Monaco.Uri.parse('inmemory://model.py')),
             glyphMargin: true
         });
+    
+        new MonacoBinding(
+            type,
+            editor.getModel(),
+            new Set([editor]),
+            provider.awareness
+        )
         
         MonacoServices.install();
 
