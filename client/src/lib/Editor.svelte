@@ -1,4 +1,6 @@
 <script lang="ts">
+    export var roomID: string;
+
     // monaco-editor imports
     import type monaco from 'monaco-editor';
     import { onMount } from 'svelte';
@@ -32,7 +34,6 @@
     let Monaco: any;
 
     onMount(async () => {
-        const roomID = window.location.href.split('/').at(-1);
 
         // @ts-ignore
         self.MonacoEnvironment = {
