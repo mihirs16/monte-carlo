@@ -57,7 +57,7 @@
         const ydoc = new Y.Doc();
         console.log(roomID);
         // @ts-ignore
-        const provider = new WebrtcProvider(ydoc, { signaling: ['wss://y-webrtc-signaling-eu.herokuapp.com']});
+        const provider = new WebrtcProvider('monaco', ydoc, { signaling: ['wss://y-webrtc-signaling-eu.herokuapp.com']});
         const type = ydoc.getText('monaco');
 
 
