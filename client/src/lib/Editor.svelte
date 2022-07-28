@@ -54,9 +54,10 @@
             }
         };
 
-        const ydoc = new Y.Doc()
-        const provider = new WebrtcProvider(roomID, ydoc)
-        const type = ydoc.getText('monaco')
+        const ydoc = new Y.Doc();
+        // @ts-ignore
+        const provider = new WebrtcProvider(roomID, ydoc, { signaling: ['wss://y-webrtc-signaling-eu.herokuapp.com']});
+        const type = ydoc.getText('monaco');
 
 
         Monaco = await import('monaco-editor');
