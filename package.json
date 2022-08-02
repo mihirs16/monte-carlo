@@ -4,12 +4,14 @@
   "description": "a lightweight yet fully-featured IDE that can be embedded into web apps.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build -w client"
+    "build": "npm run build -w client",
+    "start-signal-server": "node node_modules/y-webrtc/bin/server.js"
   },
   "author": "Mihir Singh <mihirs16@gmail.com> (https://github.com/mihirs16)",
   "license": "MIT",
   "workspaces": [
     "client",
-    "jsonrpc-ws-proxy"
+    "jsonrpc-ws-proxy",
+    "signal-server"
   ]
 }
