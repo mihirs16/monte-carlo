@@ -1,0 +1,23 @@
+{
+  "name": "signal-server",
+  "version": "0.0.1",
+  "description": "a simple signal server packaged with y-webrtc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/y-webrtc/bin/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihirs16/monte-carlo.git"
+  },
+  "author": "Mihir Singh <mihirs16@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mihirs16/monte-carlo/issues"
+  },
+  "homepage": "https://github.com/mihirs16/monte-carlo#readme",
+  "dependencies": {
+    "y-webrtc": "^10.2.3"
+  }
+}
