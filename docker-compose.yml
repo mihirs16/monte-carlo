@@ -1,0 +1,15 @@
+version: "3.9"
+services: 
+  jsonrpcproxy:
+    build: ./jsonrpc-ws-proxy/
+    ports: 
+      - "3000:3000"
+  signalserver:
+    build: ./signal-server/
+    ports:
+      - "4444:4444"
+  nginx:
+    build: ./nginx/
+    ports:
+      - "8000:80"
+
