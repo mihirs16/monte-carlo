@@ -4,25 +4,50 @@ A lightweight and fully-featured code editor that can be embedded in web applica
 
 ## Getting Started
 
-### Run the Sample Client
-
 - Fork and clone this repository.
 
 ```bash
 git clone https://github.com/:your-username:/monte-carlo
+git submodule update --init --recursive
 cd monte-carlo
 npm install
 ```
 
-- Run the JSON-RPC proxy for language servers. It supports multiple language servers to be run simultaneously.
+- This project uses `npm` workspaces. The endpoints used in the `client` are hosted at [monteapi.mihirsingh.dev](https://monteapi.mihirsingh.dev). 
 
 ```bash
-npm start -w jsonrpc-ws-proxy
-```
-
-- Run the sample client (built with svelte) concurrently.
-
-```bash
+# client
 npm run dev -w client
+
+# language servers
+npm run dev -w jsonrpc-ws-proxy
+
+# signal-server
+npm run dev -w signal-server
 ```
 
+- Or use Docker Compose to build and run all the images.
+
+```bash
+docker compose build
+docker compose up --detach
+```
+
+## Deployment
+
+1. Make sure local repository is up-to-date.
+
+2. Install Docker (and Docker Compose, if Linux) on the hosting server.
+
+3. Use Docker Compose to build and run all the images.
+
+```bash
+docker compose build
+docker compose up --detach
+```
+
+4. (Optional) To issue a certificate, use `./cert-setup.sh`.
+
+```bash
+docker compose exec nginx ./cert-setup.sh
+```
