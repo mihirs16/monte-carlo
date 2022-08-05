@@ -56,8 +56,7 @@
 
         const ydoc = new Y.Doc();
         // @ts-ignore
-        // const provider = new WebrtcProvider(roomID, ydoc, { signaling: ['wss://monteapi.mihirsingh.dev/signalserver']});
-        const provider = new WebrtcProvider(roomID, ydoc);
+        const provider = new WebrtcProvider(roomID, ydoc, { signaling: ['wss://monteapi.mihirsingh.dev/signalserver']});
         const type = ydoc.getText('monaco');
 
 
