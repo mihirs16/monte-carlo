@@ -51,3 +51,4 @@ docker compose up --detach
 ```bash
 docker compose exec nginx ./cert-setup.sh
 ```
+
