@@ -1,6 +1,6 @@
 # Monte Carlo
 
-A lightweight and fully-featured code editor that can be embedded in web applications.
+A lightweight, browser-based code editor with a remote language server and peer-to-peer collaboration.
 
 ## Getting Started
 
