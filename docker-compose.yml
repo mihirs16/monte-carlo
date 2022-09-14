@@ -12,8 +12,8 @@
     },
     "networks": {
         "default": {
-            "name": "capel-meister_default",
-            "external": true
+            "name": "heheboi-docker-network",
+            "driver": "bridge"
         }
     }
 }
