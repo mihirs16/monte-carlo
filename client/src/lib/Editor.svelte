@@ -56,7 +56,7 @@
 
         const ydoc = new Y.Doc();
         // @ts-ignore
-        const provider = new WebrtcProvider(roomID, ydoc, { signaling: ['wss://monteapi.mihirsingh.dev/signalserver']});
+        const provider = new WebrtcProvider(roomID, ydoc, { signaling: ['wss://projects.mihirsingh.dev/signalserver']});
         const type = ydoc.getText('monaco');
 
 
@@ -83,7 +83,7 @@
         MonacoServices.install();
 
         // listen to the proxy server (for pyls in this case) 
-        const webSocket = new WebSocket('wss://monteapi.mihirsingh.dev/jsonrpcproxy?lang=python');
+        const webSocket = new WebSocket('wss://projects.mihirsingh.dev/jsonrpcproxy?lang=python');
         webSocket.onopen = () => {
             const socket        = toSocket(webSocket);
             const reader        = new WebSocketMessageReader(socket);
