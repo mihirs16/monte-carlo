@@ -13,7 +13,7 @@ cd monte-carlo
 npm install
 ```
 
-- This project uses `npm` workspaces. The endpoints used in the `client` are hosted at [monteapi.mihirsingh.dev](https://monteapi.mihirsingh.dev). 
+- This project uses `npm` workspaces. The endpoints used in the `client` are hosted at [projects.mihirsingh.dev](https://projects.mihirsingh.dev). 
 
 ```bash
 # client
