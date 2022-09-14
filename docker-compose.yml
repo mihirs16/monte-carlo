@@ -2,11 +2,11 @@
     "version": "3.9",
     "services": {
         "jsonrpcproxy": {
-            "build": "../monte-carlo/jsonrpc-ws-proxy/",
+            "build": "./jsonrpc-ws-proxy/",
             "ports": ["3000:3000"]
         },
         "signalserver": {
-            "build": "../monte-carlo/signal-server/", 
+            "build": "./signal-server/", 
             "ports": ["4444:4444"]
         }
     },
