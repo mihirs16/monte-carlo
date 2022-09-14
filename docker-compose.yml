@@ -1,0 +1,19 @@
+{
+    "version": "3.9",
+    "services": {
+        "jsonrpcproxy": {
+            "build": "../monte-carlo/jsonrpc-ws-proxy/",
+            "ports": ["3000:3000"]
+        },
+        "signalserver": {
+            "build": "../monte-carlo/signal-server/", 
+            "ports": ["4444:4444"]
+        }
+    },
+    "networks": {
+        "default": {
+            "name": "capel-meister_default",
+            "external": true
+        }
+    }
+}
